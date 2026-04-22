@@ -14,6 +14,6 @@ jobs:
         with:
           node-version: 24
       - name: Instalar npm
-        run: npm install
+        run: npm ci
       - name: Executar tests npm
         run: npm test
