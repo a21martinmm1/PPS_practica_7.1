@@ -1,0 +1,19 @@
+name: Proba app NodeJS
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+jobs:
+  Main:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout de repositorio
+        uses: actions/checkout@v6
+      - name: Setup NodeJS
+        uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Instalar npm
+        run: npm install
+      - name: Executar tests npm
+        run: npm test
